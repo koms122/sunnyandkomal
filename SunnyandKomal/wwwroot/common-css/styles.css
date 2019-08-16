@@ -1,0 +1,51 @@
+img {
+    width: 100%;
+}
+
+button {
+    outline: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+b.light-color {
+    color: #444;
+}
+
+.icon {
+    font-size: 1.1em;
+    display: inline-block;
+    line-height: inherit;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    line-height: inherit;
+}
+
+.right-section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background-size: cover;
+    z-index: 1;
+}
+
+.right-section:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    opacity: .3;
+    background: linear-gradient(to right, #23074d, #cc5333);
+}
+
+#rounded-countdown {
+    /*width: 80%;*/
+    margin: 0 auto;
+}

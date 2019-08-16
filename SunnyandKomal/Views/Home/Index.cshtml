@@ -1,94 +1,199 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+@section Styles{
+    <link href="~/css/home.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/js/site.js"></script>
+    <link href="common-css/ionicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+    <link href="common-css/bootstrap.css" rel="stylesheet">
+    <link href="common-css/styles.css" rel="stylesheet">
+    <link href="common-css/responsive.css" rel="stylesheet">
+}
+
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="#home" class="w3-bar-item w3-button">Home</a>
+    <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+    <a href="#wedding" class="w3-bar-item w3-button">Wedding Details</a>
+    <a href="#guestbook" class="w3-bar-item w3-button">Guest Book</a>
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+<div class="name-container d-flex w3-center">
+    <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+</div>
+
+<div>
+    <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:55%; z-index: -1">
+        <div class="background-img"></div>
+    </nav>
+    <div class="name-text">
+        <h1 class="name cursive">Sunny</h1>
+        <h1 class="name cursive">&amp; Komal</h1>
     </div>
 </div>
+<div class="w3-main" style="margin-left:55%">
+    <div id="us" class="sunnykomal-container">
+        <div>
+            <h1 class="cursive" style="font-size:60px!important; text-align:center;">Goa, India</h1>
+            <div id="rounded-countdown">
+                <div class="countdown"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="gallery-container">
+        <div class="gallery-text cursive">Gallery</div>
+        <div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/images/gallery1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery2.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery3.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery4.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery5.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery6.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery7.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery8.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery9.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery10.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery11.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery12.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery13.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery14.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery15.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery16.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery17.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery18.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery19.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery20.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/gallery21.jpg">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="wedding" class="wedding-container">
+        <div class="weddingdetail-text cursive">Wedding Details</div>
+        <div class="timeline">
+            <div><span class="timeline-date">February 1<span class="ordinal">st</span>, 2020</span></div>
+            <ul>
+                <li>
+                    <img src="~/images/arrival.png" alt="arrival" />
+                    <div class="bullet pink"></div>
+                    <div class="desc">
+                        <div>2:00 PM<br /></div>
+                        <div>Check-in</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/images/sangeet.jpg" alt="sangeet" />
+                    <div class="bullet green"></div>
+                    <div class="desc">
+                        <div>6:00 PM<br /></div>
+                        <div>Sangeet Sandhya &amp; Mehndi</div>
+                    </div>
+                </li>
+            </ul>
+            <div><span class="timeline-date">February 2<span class="ordinal">nd</span>, 2020</span></div>
+            <ul>
+                <li>
+                    <img src="~/images/haldi.png" alt="haldi" />
+                    <div class="bullet orange"></div>
+                    <div class="desc">
+                        <div>10:00 AM<br /></div>
+                        <div>Pithi &amp; Mandap Muhrat</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/images/wedding.png" alt="sangeet" />
+                    <div class="bullet green"></div>
+                    <div class="desc">
+                        <div>4:30 PM Onwards<br /></div>
+                        <div>Baraat &amp; Wedding</div>
+                    </div>
+                </li>
+            </ul>
+            <div><span class="timeline-date">February 3<span class="ordinal">rd</span>, 2020</span></div>
+            <ul>
+                <li>
+                    <img src="~/images/departure.png" alt="haldi" />
+                    <div class="bullet pink"></div>
+                    <div class="desc">
+                        <div>11:00 AM<br /></div>
+                        <div>Check-out</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="guestbook" class="guestbook-container">
+    <div>
+        Guest Book
+    </div>
+</div>
+
+
+@section Scripts{
+    <script type="text/javascript" src="common-js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="common-js/tether.min.js"></script>
+    <script type="text/javascript" src="common-js/bootstrap.js"></script>
+    <script type="text/javascript" src="common-js/jquery.classycountdown.js"></script>
+    <script type="text/javascript" src="common-js/jquery.knob.js"></script>
+    <script type="text/javascript" src="common-js/jquery.throttle.js"></script>
+    <script type="text/javascript" src="common-js/scripts.js"></script>
+    <script src="~/js/site.js"></script>
+}
