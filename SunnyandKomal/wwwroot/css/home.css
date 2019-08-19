@@ -1,134 +1,385 @@
-﻿.background-img {
-    background-image: url(../images/mainpic.jpg);
-    min-height: -webkit-fill-available;
-    background-position: 60%;
-    background-size: cover;
+﻿.w3-sidebar {
+    height: auto !important;
+    font-family: 'Arima Madurai', cursive !important;
 }
-.name-container{
+.menu-container {
     position: fixed !important;
 }
+.background-img {
+    background-image: url(../images/mainpic.jpg);
+    min-height: -webkit-fill-available;
+    background-size: cover;
+}
 .name-text {
-    position: fixed;
-    bottom: 60px;
-    left: 15px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
 }
 .name {
-    color: black;
-    letter-spacing: 3px;
-    font-size: 85px !important;
+    color: white;
+    font-weight: 100;
+    letter-spacing: -5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.goa-text {
+    text-align: center;
+    font-weight: 500;
+    color: white;
 }
 .date-text {
-    color: #ce7f7e;
-    letter-spacing: 5px;
-    /*border-top: 2px solid;
-    border-bottom: 2px solid;*/
-    font-family: "Lobster Two";
-    text-shadow: 1px 1px 2px rgb(60, 31, 31);
-    font-size: 40px !important;
-    margin-top: 15px !important;
-    bottom: 60px;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+}
+.header-text {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.36);
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+.gallery-text {
+    text-align: center;
+    margin: 30px 0px 30px 0px;
+    color: rgba(0, 0, 0, 0.36);
+    font-weight: 100;
 }
 .sunnykomal-container {
-    background-image: url(../images/homepic.jpg);
+    background-image: url(../images/homepic.jpeg);
     height: 100vh !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: .8;
+    opacity: .85;
+    background-size: 45%;
 }
-
-/*TIMELINE START*/
-.timeline{
+.gallery-container {
+    display: flex;
+    justify-content: center;
+}
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+}
+.accommodation-container {
     text-align: center;
 }
-.timeline li {
-    padding: 3em 0 0 2em;
-    margin: 0;
-    list-style: none;
-    position: relative;
+.accommodation-container > img {
+    width: 75% !important;
+    padding: 10px 0px 5px 0px;
 }
-
-.timeline li::before {
-    content: ' ';
-    height: 100%;
-    width: 1px;
-    background-color: #d9d9d9;
-    position: absolute;
-    top: 0;
-    left: 20.1em;
-    z-index: -1;
-}
-
-.timeline li div {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.timeline img {
-    width: 15% !important;
-    margin-right: 15px !important;
-}
-
-.timeline .bullet {
-    width: 1em;
-    height: 1em;
-    box-sizing: border-box;
-    border-radius: 50%;
-    background: #fff;
-    z-index: 1;
-    margin-right: 1em;
-}
-
-.timeline .bullet.pink {
-    border: 2px solid #F93B69;
-}
-
-.timeline .bullet.green {
-    border: 2px solid #B0E8E2;
-}
-
-.timeline .bullet.orange {
-    border: 2px solid #EB8B6E;
-}
-
-.timeline .desc {
-    width: 30%;
-    font-family: 'Gentium Book Basic', serif;
-    text-transform: uppercase;
-    font-size: 22px !important;
-}
-.timeline-date {
-    font-family: 'Gentium Book Basic', serif;
-    text-transform: uppercase;
-    font-size: 24px !important;
-    border-bottom: 2px solid black;
-    padding: 5px;
-}
-/*TIMELINE END*/
-.wedding-container {
-}
-.gallery-text {
+.travel-container {
     text-align: center;
-    font-size: 60px;
-    margin: 30px 0px 30px 0px;
-    color: rgba(0, 0, 0, 0.36);
-}
-.weddingdetail-text {
-    text-align: center;
-    font-size: 60px;
-    margin: 50px 0px 30px 0px;
-    color: rgba(0, 0, 0, 0.36);
 }
 .ordinal {
     vertical-align: super;
     font-size: 12px;
 }
+hr {
+    margin: 50px 0px 30px 0px !important;
+}
+
+/*MOBILE START*/
+@media only screen and (max-width: 992px) {
+    .menu-container button {
+        color: gray !important;
+    }
+    .background-img {
+        background-position: 50%;
+    }
+    .name {
+        font-size: 60px !important;
+    }
+    .name-text {
+        left: 25px;
+    }
+    .goa-text {
+        margin: 30px 0px 30px 0px;
+        font-size: 45px !important;
+    }
+    .date-text {
+        margin: 30px 0px 30px 0px;
+        font-size: 35px !important;
+    }
+
+    .header-text {
+        font-size: 45px;
+    }
+    .gallery-container {
+        z-index: -1;
+    }
+    .gallery-text {
+        font-size: 45px;
+    }
+    .content{
+        padding-top: 20px !important;
+    }
+    .time h4 {
+        font-size: 1em !important;
+    }
+    .timeline {
+        padding: 40px 0;
+    }
+
+    .timeline-date {
+        margin-left: 15px;
+    }
+    .content > img {
+        width: 40% !important;
+        padding-top: 15px !important;
+    }
+    .timeline ul li {
+        padding: 35px 40px;
+    }
+    .accommodation-container .accommodation-details {
+        padding: 10px 30px 0px 30px !important;
+    }
+
+}
+/*MOBILE END*/
+
+/*DESKTOP START*/
+@media only screen and (min-width: 993px) {
+    .menu-container button {
+        color: white !important;
+    }
+    .w3-sidebar {
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.39);
+        color: white;
+        font-size: 18px;
+    }
+    .w3-sidebar > button {
+        color: white;
+        position: relative;
+        background: black;
+    }
+    .mainpic-nav {
+        height: 100%;
+        width: 55%;
+        background-color: #fff;
+        position: fixed !important;
+        z-index: -1;
+        overflow: auto
+    }
+    .background-img {
+        background-position: 60%;
+    }
+    .name {
+        font-size: 85px !important;
+    }
+    .name-text {
+        left: 35px;
+        position: fixed;
+    }
+    .goa-text {
+        font-size: 60px !important;
+    }
+    .date-text {
+        font-size: 50px !important;
+    }
+    .date-container {
+        text-align: center;
+    }
+    .gallery-text {
+        font-size: 60px;
+    }
+    .header-text {
+        font-size: 60px;
+    }
+    .timeline {
+        padding: 15px 0;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        text-align: start;
+        width: 235px;
+    }
+    .timeline ul li:nth-child(even) .time {
+        text-align: end;
+        width: 235px;
+    }
+    .timeline-date {
+        margin-left: 5px;
+    }
+    .content > img {
+        width: 50% !important;
+    }
+    .timeline ul li {
+        padding: 15px 40px;
+    }
+    .accommodation-container .accommodation-details {
+        padding: 10px 55px 0px 55px !important;
+    }
+}
+/*DESKTOP END*/
+
+
+/*LARGE DESKTOP START*/
+@media (min-width: 1200px) {
+}
+/*LARGE DESKTOP END*/
+
 
 
 /*SLIDESHOW START*/
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
+}
+/*SLIDESHOW END*/
 
-.carousel-control-prev, .carousel-control-next {
-    color: black !important;
+
+/*TIMELINE START*/
+
+.timeline {
+    position: relative;
+    box-sizing: border-box;
 }
 
-/*SLIDESHOW END*/
+    .timeline:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 2px;
+        height: 75%;
+        background: #c5c5c5;
+    }
+
+    .timeline ul {
+        padding: 0;
+        margin: 0;
+    }
+
+        .timeline ul li {
+            list-style: none;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+            .timeline ul li:nth-child(odd) {
+                float: left;
+                text-align: right;
+                clear: both;
+            }
+
+            .timeline ul li:nth-child(even) {
+                float: right;
+                text-align: left;
+                clear: both;
+            }
+
+.timeline-date {
+    font-family: 'Gentium Book Basic', serif;
+    text-transform: uppercase;
+    font-size: 24px !important;
+    border-bottom: 2px solid rgba(156, 46, 56, 0.82);
+    color: rgba(156, 46, 56, 0.82) !important
+}
+
+.content {
+    padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd):before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 27px;
+    right: -6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(55, 192, 128);
+}
+
+.timeline ul li:nth-child(even):before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 24px;
+    left: -4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgb(233, 33, 99);
+}
+
+/*.timeline ul li h3 {
+    padding: 0;
+    margin: 0;
+    color: rgba(233,33,99,1);
+    font-weight: 600;
+}*/
+/*.timeline ul li .time h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}*/
+
+.timeline ul li:nth-child(odd) .time {
+    position: absolute;
+    top: 12px;
+    right: -240px;
+    margin: 0;
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.79);
+    border-radius: 18px;
+    font-family: 'Gentium Book Basic', serif;
+    text-transform: uppercase;
+    font-size: 22px !important;
+}
+
+.timeline ul li:nth-child(even) .time {
+    position: absolute;
+    top: 12px;
+    left: -240px;
+    margin: 0;
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.79);
+    border-radius: 18px;
+    font-family: 'Gentium Book Basic', serif;
+    text-transform: uppercase;
+    font-size: 22px !important;
+}
+
+@media(max-width:1000px) {
+    .timeline {
+        width: 100%;
+    }
+}
+
+@media(max-width:767px) {
+    .timeline {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .timeline:before {
+        left: 20px;
+        height: 75%;
+    }
+
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even) {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+        .timeline ul li:nth-child(odd):before,
+        .timeline ul li:nth-child(even):before {
+            top: -18px;
+            left: 16px;
+        }
+
+        .timeline ul li:nth-child(odd) .time,
+        .timeline ul li:nth-child(even) .time {
+            top: -30px;
+            left: 30px;
+            right: inherit;
+        }
+}
+
+
+/*TIMELINE END*/
