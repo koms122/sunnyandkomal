@@ -1,4 +1,4 @@
-﻿.w3-sidebar {
+﻿#mySidebar {
     height: auto !important;
     font-family: 'Arima Madurai', cursive !important;
 }
@@ -68,7 +68,7 @@
     width: 75% !important;
     padding: 10px 0px 5px 0px;
 }
-.travel-container {
+.travel-container .header-text, .travel-container p, .travel-container h4 {
     text-align: center;
 }
 .ordinal {
@@ -138,18 +138,18 @@ hr {
 }
 /*MOBILE END*/
 
-/*DESKTOP START*/
-@media only screen and (min-width: 993px) {
+/* Large devices (laptops/desktops, 992px and up) START */
+@media only screen and (min-width: 992px) {
     .menu-container button {
         color: white !important;
     }
-    .w3-sidebar {
+    #mySidebar {
         width: 200px;
         background-color: rgba(0, 0, 0, 0.39);
         color: white;
         font-size: 18px;
     }
-    .w3-sidebar > button {
+    #mySidebar > button {
         color: white;
         position: relative;
         background: black;
@@ -212,7 +212,7 @@ hr {
         padding: 10px 55px 0px 55px !important;
     }
 }
-/*DESKTOP END*/
+/* Large devices (laptops/desktops, 992px and up) END */
 
 
 /*LARGE DESKTOP START*/
@@ -235,40 +235,34 @@ hr {
     position: relative;
     box-sizing: border-box;
 }
-
-    .timeline:before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        width: 2px;
-        height: 75%;
-        background: #c5c5c5;
-    }
-
-    .timeline ul {
-        padding: 0;
-        margin: 0;
-    }
-
-        .timeline ul li {
-            list-style: none;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-            .timeline ul li:nth-child(odd) {
-                float: left;
-                text-align: right;
-                clear: both;
-            }
-
-            .timeline ul li:nth-child(even) {
-                float: right;
-                text-align: left;
-                clear: both;
-            }
-
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 75%;
+    background: #c5c5c5;
+}
+.timeline ul {
+    padding: 0;
+    margin: 0;
+}
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
 .timeline-date {
     font-family: 'Gentium Book Basic', serif;
     text-transform: uppercase;
@@ -276,11 +270,9 @@ hr {
     border-bottom: 2px solid rgba(156, 46, 56, 0.82);
     color: rgba(156, 46, 56, 0.82) !important
 }
-
 .content {
     padding-bottom: 20px;
 }
-
 .timeline ul li:nth-child(odd):before {
     content: '';
     position: absolute;
@@ -292,7 +284,6 @@ hr {
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgb(55, 192, 128);
 }
-
 .timeline ul li:nth-child(even):before {
     content: '';
     position: absolute;
@@ -304,19 +295,6 @@ hr {
     border-radius: 50%;
     box-shadow: 0 0 0 3px rgb(233, 33, 99);
 }
-
-/*.timeline ul li h3 {
-    padding: 0;
-    margin: 0;
-    color: rgba(233,33,99,1);
-    font-weight: 600;
-}*/
-/*.timeline ul li .time h4 {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-}*/
-
 .timeline ul li:nth-child(odd) .time {
     position: absolute;
     top: 12px;
@@ -329,7 +307,6 @@ hr {
     text-transform: uppercase;
     font-size: 22px !important;
 }
-
 .timeline ul li:nth-child(even) .time {
     position: absolute;
     top: 12px;
@@ -342,44 +319,73 @@ hr {
     text-transform: uppercase;
     font-size: 22px !important;
 }
-
 @media(max-width:1000px) {
     .timeline {
         width: 100%;
     }
 }
-
 @media(max-width:767px) {
     .timeline {
         width: 100%;
         padding-bottom: 0;
     }
-
     .timeline:before {
         left: 20px;
         height: 75%;
     }
-
     .timeline ul li:nth-child(odd),
     .timeline ul li:nth-child(even) {
         width: 100%;
         text-align: left;
         padding-left: 50px;
     }
-
-        .timeline ul li:nth-child(odd):before,
-        .timeline ul li:nth-child(even):before {
-            top: -18px;
-            left: 16px;
-        }
-
-        .timeline ul li:nth-child(odd) .time,
-        .timeline ul li:nth-child(even) .time {
-            top: -30px;
-            left: 30px;
-            right: inherit;
-        }
+    .timeline ul li:nth-child(odd):before,
+    .timeline ul li:nth-child(even):before {
+        top: -18px;
+        left: 16px;
+    }
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time {
+        top: -30px;
+        left: 30px;
+        right: inherit;
+    }
 }
 
-
 /*TIMELINE END*/
+
+
+/*TAB START*/
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+/*TAB END*/
