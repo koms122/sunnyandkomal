@@ -39,11 +39,11 @@
         </div>
     </div>
 
-    <div id="gallery" class="gallery-text cursive">Gallery</div>
 
-    <div class="gallery-container col-lg-12 col-sm-12">
-        <div class="col-lg-12 col-sm-12">
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="gallery" class="gallery-container">
+        <div class="gallery-text cursive">Gallery</div>
+        <div class="col-lg-12 col-sm-10">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="~/images/gallery1.jpg">
@@ -110,11 +110,11 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -135,8 +135,8 @@
                                 <img src="~/images/arrival.png" alt="arrival" />
                             </div>
                             <div class="time">
-                                <h4>2:00 PM <br /></h4>
-                                <h4>Check-in</h4>
+                                <div>2:00 PM <br /></div>
+                                <div>Check-in</div>
                             </div>
                         </li>
                         <li>
@@ -144,8 +144,8 @@
                                 <img src="~/images/sangeet.jpg" alt="sangeet" />
                             </div>
                             <div class="time">
-                                <h4>6:00 PM Onwards<br /></h4>
-                                <h4>Sangeet Sandhya &amp; Mehndi</h4>
+                                <div>6:00 PM Onwards<br /></div>
+                                <div>Sangeet Sandhya &amp; Mehndi</div>
                             </div>
                         </li>
                         <div style="clear:both;"></div>
@@ -161,8 +161,8 @@
                                 <img src="~/images/haldi.png" alt="haldi" />
                             </div>
                             <div class="time">
-                                <h4>10:00 AM <br /></h4>
-                                <h4>Pithi &amp; Mandap Muhrat</h4>
+                                <div>10:00 AM <br /></div>
+                                <div>Pithi &amp; Mandap Muhrat</div>
                             </div>
                         </li>
                         <li>
@@ -170,8 +170,8 @@
                                 <img src="~/images/wedding.png" alt="wedding" />
                             </div>
                             <div class="time">
-                                <h4>5:00 PM Onwards<br /></h4>
-                                <h4>Baraat &amp; Wedding</h4>
+                                <div>5:00 PM Onwards<br /></div>
+                                <div>Baraat &amp; Wedding</div>
                                 <h6>(Dress Code: Indian Traditional)</h6>
                             </div>
                         </li>
@@ -188,8 +188,8 @@
                                 <img src="~/images/departure.png" alt="departure" />
                             </div>
                             <div class="time">
-                                <h4>11:00 AM <br /></h4>
-                                <h4>Check-out</h4>
+                                <div>11:00 AM <br /></div>
+                                <div>Check-out</div>
                             </div>
                         </li>
                         <div style="clear:both;"></div>
@@ -225,37 +225,267 @@
         <div class="travel-tab-container">
             <!--Tab Links-->
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'Surat')" id="defaultOpen">Travelling from Surat</button>
-                <button class="tablinks" onclick="openCity(event, 'Mumbai')">Travelling from Mumbai</button>
+                <button class="tablinks w-50" onclick="openCity(event, 'Surat')" id="defaultOpen">From Surat</button>
+                <button class="tablinks w-50" onclick="openCity(event, 'Mumbai')">From Mumbai</button>
             </div>
             <!--Tab Content-->
             <div id="Surat" class="tabcontent">
-                <div class="tab">
+                <div class="tab tabbuttons">
                     <button class="tablinks" onclick="openType(event, 'SuratFlights')">Flights</button>
                     <button class="tablinks" onclick="openType(event, 'SuratTrains')">Trains</button>
                 </div>
                 <div id="SuratFlights" class="tabcontent type">
-                    <h3>Flights</h3>
-                     <p>London is the capital city of England.</p>
+                    <h4>Flights from Surat to Goa</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>Spicejet</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Surat Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 6:35 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 7:35 AM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h4>Flights from Goa to Surat</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>Spicejet</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 7:35 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Surat Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 9:40 AM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="SuratTrains" class="tabcontent type">
-                    <h3>Trains</h3>
-                    <p>London is the capital city of England.</p>
+                    <h4>Trains from Surat to Goa</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Train</b></td>
+                                <td>22414/Hazrat Nizamuddin - Madgaon Rajdhani Express</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Feb 1<span class="ordinal">st</span> at 12:13 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Madgaon Railway Station<br />
+                                    Feb 1<span class="ordinal">st</span> at 2:20 PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h4>Trains from Goa to Surat</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Train</b></td>
+                                <td>22413/Madgaon - Hazrat Nizamuddin Rajdhani Express</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Madgaon Railway Station<br />
+                                    Feb 3<span class="ordinal">rd</span> at 11:00 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Feb 4<span class="ordinal">th</span> at 1:50 AM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div id="Mumbai" class="tabcontent">
-                <div class="tab">
+                <div class="tab tabbuttons">
                     <button class="tablinks" onclick="openType(event, 'MumbaiFlights')">Flights</button>
                     <button class="tablinks" onclick="openType(event, 'MumbaiTrains')">Trains</button>
                 </div>
                 <div id="MumbaiFlights" class="tabcontent type">
-                    <h3>Flights</h3>
-                    <p>London is the capital city of England.</p>
+                    <h4>Flights from Mumbai to Goa</h4>
+                    <h6>Option 1:</h6>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>GoAir</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Chhatrapati Shivaji International Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 11:30AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 12:40PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h6>Option 2:</h6>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>IndiGo</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Chhatrapati Shivaji International Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 11:15AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 1<span class="ordinal">st</span> at 12:40PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h4>Flights from Goa to Mumbai</h4>
+                    <h6>Option 1:</h6>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>GoAir</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 1:10PM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Chhatrapati Shivaji International Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 2:35PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h6>Option 2:</h6>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Airline</b></td>
+                                <td>IndiGo</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Goa International Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 1:10PM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Chhatrapati Shivaji International Airport<br />
+                                    Feb 3<span class="ordinal">rd</span> at 2:40PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div id="MumbaiTrains" class="tabcontent type">
-                    <h3>Trains</h3>
-                    <p>London is the capital city of England.</p>
+                    <h4>Trains from Mumbai to Goa</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Train</b></td>
+                                <td>22414/Hazrat Nizamuddin - Madgaon Rajdhani Express</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Feb 1<span class="ordinal">st</span> at 4:30 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Madgaon Railway Station<br />
+                                    Feb 1<span class="ordinal">st</span> at 2:20 PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <h4>Trains from Goa to Mumbai</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><b>Train</b></td>
+                                <td>22413/Madgaon - Hazrat Nizamuddin Rajdhani Express</td>
+                            </tr>
+                            <tr>
+                                <td><b>Departure</b></td>
+                                <td>
+                                    Madgaon Railway Station<br />
+                                    Feb 3<span class="ordinal">rd</span> at 11:00 AM
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Arrival</b></td>
+                                <td>
+                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Feb 3<span class="ordinal">rd</span> at 8:40 PM
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -264,10 +494,33 @@
     <hr />
 
     <div id="guestbook" class="guestbook-container">
+        <div class="header-text cursive">Guest Book</div>
         <div>
+            <div class="guestbook-form">
+                <form action="https://formspree.io/koms122@gmail.com" method="POST">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input class="form-control" type="text" placeholder="Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Message</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message" placeholder="Thanks for celebrating with us! Leave a note to help us remember this special time in our lives."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 
+    <footer>
+        <div>
+            <p class="text-center">&copy; 2019 - Sunny &amp; Komal</p>
+        </div>
+    </footer>
 
     @section Scripts{
         <script src="~/js/site.js"></script>

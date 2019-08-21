@@ -32,6 +32,13 @@
     font-weight: 100;
     color: white;
 }
+#countdown {
+    color: hotpink;
+    font-family: monospace !important;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 2em;
+}
 .header-text {
     text-align: center;
     color: rgba(0, 0, 0, 0.36);
@@ -53,10 +60,6 @@
     opacity: .85;
     background-size: 45%;
 }
-.gallery-container {
-    display: flex;
-    justify-content: center;
-}
 .timeline-container {
     display: flex;
     flex-direction: column;
@@ -71,12 +74,24 @@
 .travel-container .header-text, .travel-container p, .travel-container h4 {
     text-align: center;
 }
+.travel-tab-container {
+    margin: 25px;
+}
 .ordinal {
     vertical-align: super;
     font-size: 12px;
 }
 hr {
     margin: 50px 0px 30px 0px !important;
+}
+footer{
+    padding-top: 100px;
+}
+.guestbook-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /*MOBILE START*/
@@ -88,7 +103,7 @@ hr {
         background-position: 50%;
     }
     .name {
-        font-size: 60px !important;
+        font-size: 3.7em !important;
     }
     .name-text {
         left: 25px;
@@ -101,20 +116,19 @@ hr {
         margin: 30px 0px 30px 0px;
         font-size: 35px !important;
     }
-
     .header-text {
-        font-size: 45px;
+        font-size: 2.7em !important;
     }
     .gallery-container {
         z-index: -1;
     }
     .gallery-text {
-        font-size: 45px;
+        font-size: 2.7em !important;
     }
     .content{
         padding-top: 20px !important;
     }
-    .time h4 {
+    .time p {
         font-size: 1em !important;
     }
     .timeline {
@@ -190,7 +204,9 @@ hr {
     .timeline {
         padding: 15px 0;
     }
-
+    .time p {
+        font-size: 1.2em;
+    }
     .timeline ul li:nth-child(odd) .time {
         text-align: start;
         width: 235px;
@@ -264,9 +280,9 @@ hr {
     clear: both;
 }
 .timeline-date {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Roboto Slab', serif !important;
     text-transform: uppercase;
-    font-size: 24px !important;
+    font-size: 1.2em !important;
     border-bottom: 2px solid rgba(156, 46, 56, 0.82);
     color: rgba(156, 46, 56, 0.82) !important
 }
@@ -303,9 +319,9 @@ hr {
     padding: 8px 16px;
     color: rgba(0, 0, 0, 0.79);
     border-radius: 18px;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Roboto Slab', serif !important;
     text-transform: uppercase;
-    font-size: 22px !important;
+    font-size: 1em !important;
 }
 .timeline ul li:nth-child(even) .time {
     position: absolute;
@@ -315,9 +331,9 @@ hr {
     padding: 8px 16px;
     color: rgba(0, 0, 0, 0.79);
     border-radius: 18px;
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Roboto Slab', serif !important;
     text-transform: uppercase;
-    font-size: 22px !important;
+    font-size: 1em !important;
 }
 @media(max-width:1000px) {
     .timeline {
@@ -361,6 +377,15 @@ hr {
 .tab {
     overflow: hidden;
     background-color: #f1f1f1;
+}
+#Surat {
+    text-align: -webkit-center;
+}
+#Mumbai {
+    text-align: -webkit-center;
+}
+.tabbuttons {
+    width: max-content;
 }
 /* Style the buttons inside the tab */
 .tab button {
