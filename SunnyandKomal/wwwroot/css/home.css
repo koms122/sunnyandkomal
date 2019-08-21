@@ -110,11 +110,14 @@ footer{
     }
     .goa-text {
         margin: 30px 0px 30px 0px;
-        font-size: 45px !important;
+        font-size: 2.7em !important;
     }
     .date-text {
         margin: 30px 0px 30px 0px;
-        font-size: 35px !important;
+        font-size: 2.2em !important;
+    }
+    #countdown {
+        padding-top: 45px;
     }
     .header-text {
         font-size: 2.7em !important;
@@ -128,18 +131,20 @@ footer{
     .content{
         padding-top: 20px !important;
     }
-    .time p {
-        font-size: 1em !important;
+    .time div {
+        font-size: 1em;
+    }
+    .dresscode {
+        font-size: .75em !important;
     }
     .timeline {
         padding: 40px 0;
     }
-
     .timeline-date {
         margin-left: 15px;
     }
     .content > img {
-        width: 40% !important;
+        width: 35% !important;
         padding-top: 15px !important;
     }
     .timeline ul li {
@@ -151,6 +156,119 @@ footer{
 
 }
 /*MOBILE END*/
+
+
+/*MOBILE LANDSCAPE START*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
+    .content > img {
+        width: 25% !important;
+    }
+    /*.date-container {
+        text-align: center;
+    }*/
+    .timeline ul li:nth-child(even) .time {
+        /*text-align: end;*/
+        width: 235px;
+    }
+    .timeline ul li:nth-child(odd) .time {
+        /*text-align: start;*/
+        width: 235px;
+    }
+}
+/*MOBILE LANDSCAPE END*/
+
+
+
+/*Tablets (iPads) START*/
+@media only screen and (min-device-width: 767px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .menu-container button {
+        color: gray !important;
+    }
+    .background-img {
+        background-position: 50%;
+    }
+
+    .name {
+        font-size: 3.7em !important;
+    }
+
+    .name-text {
+        left: 25px;
+    }
+
+    .goa-text {
+        margin: 30px 0px 30px 0px;
+        font-size: 2.7em !important;
+    }
+
+    .date-text {
+        margin: 30px 0px 30px 0px;
+        font-size: 2.2em !important;
+    }
+
+    #countdown {
+        padding-top: 45px;
+    }
+
+    .header-text {
+        font-size: 2.7em !important;
+    }
+
+    .gallery-container {
+        z-index: -1;
+    }
+
+    .gallery-text {
+        font-size: 2.7em !important;
+    }
+
+    .content {
+        padding-top: 20px !important;
+    }
+
+    .time div {
+        font-size: 1em;
+    }
+
+    .dresscode {
+        font-size: .75em !important;
+    }
+
+    .timeline {
+        padding: 40px 0;
+    }
+
+    .timeline-date {
+        margin-left: 15px;
+    }
+
+    .timeline ul li {
+        padding: 35px 40px;
+    }
+    .accommodation-container .accommodation-details {
+        padding: 10px 30px 0px 30px !important;
+    }
+    .content > img {
+        width: 25% !important;
+        padding-top: 15px !important;
+    }
+    .date-container {
+        text-align: center;
+    }
+    .timeline ul li:nth-child(even) .time {
+        text-align: end;
+        width: 235px;
+    }
+
+    .timeline ul li:nth-child(odd) .time {
+        text-align: start;
+        width: 235px;
+    }
+
+}
+/*Tablets (iPads) END*/
+
+
 
 /* Large devices (laptops/desktops, 992px and up) START */
 @media only screen and (min-width: 992px) {
@@ -180,17 +298,17 @@ footer{
         background-position: 60%;
     }
     .name {
-        font-size: 85px !important;
+        font-size: 5em !important;
     }
     .name-text {
         left: 35px;
         position: fixed;
     }
     .goa-text {
-        font-size: 60px !important;
+        font-size: 3.7em !important;
     }
     .date-text {
-        font-size: 50px !important;
+        font-size: 2.8em !important;
     }
     .date-container {
         text-align: center;
@@ -204,15 +322,18 @@ footer{
     .timeline {
         padding: 15px 0;
     }
-    .time p {
+    .time div {
         font-size: 1.2em;
     }
-    .timeline ul li:nth-child(odd) .time {
-        text-align: start;
-        width: 235px;
+    .dresscode {
+        font-size: 1em !important;
     }
     .timeline ul li:nth-child(even) .time {
         text-align: end;
+        width: 235px;
+    }
+    .timeline ul li:nth-child(odd) .time {
+        text-align: start;
         width: 235px;
     }
     .timeline-date {
@@ -315,6 +436,7 @@ footer{
     position: absolute;
     top: 12px;
     right: -240px;
+    width: 235px;
     margin: 0;
     padding: 8px 16px;
     color: rgba(0, 0, 0, 0.79);
@@ -327,6 +449,7 @@ footer{
     position: absolute;
     top: 12px;
     left: -240px;
+    width: 235px;
     margin: 0;
     padding: 8px 16px;
     color: rgba(0, 0, 0, 0.79);

@@ -21,7 +21,7 @@
     <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
 </div>
 
-<div class="mainpic-container">
+<div id="home" class="mainpic-container">
     <nav class="mainpic-nav">
         <div class="background-img"></div>
     </nav>
@@ -42,7 +42,7 @@
 
     <div id="gallery" class="gallery-container">
         <div class="gallery-text cursive">Gallery</div>
-        <div class="col-lg-12 col-sm-10">
+        <div class="col-lg-12 col-sm-12">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -144,8 +144,8 @@
                                 <img src="~/images/sangeet.jpg" alt="sangeet" />
                             </div>
                             <div class="time">
-                                <div>6:00 PM Onwards<br /></div>
-                                <div>Sangeet Sandhya &amp; Mehndi</div>
+                                <div>6:00 PM<br /></div>
+                                <div>Sangeet &amp; Mehndi</div>
                             </div>
                         </li>
                         <div style="clear:both;"></div>
@@ -170,9 +170,9 @@
                                 <img src="~/images/wedding.png" alt="wedding" />
                             </div>
                             <div class="time">
-                                <div>5:00 PM Onwards<br /></div>
+                                <div>5:00 PM<br /></div>
                                 <div>Baraat &amp; Wedding</div>
-                                <h6>(Dress Code: Indian Traditional)</h6>
+                                <div class="dresscode">(Dress Code: Indian Traditional)</div>
                             </div>
                         </li>
                         <div style="clear:both;"></div>
@@ -284,6 +284,8 @@
                     </table>
                 </div>
                 <div id="SuratTrains" class="tabcontent type">
+                    <div><b>Train bookings open 120 days prior to departure date</b></div>
+                    <br />
                     <h4>Trains from Surat to Goa</h4>
                     <table class="table table-striped">
                         <tbody>
@@ -294,7 +296,7 @@
                             <tr>
                                 <td><b>Departure</b></td>
                                 <td>
-                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Surat Railway Station<br />
                                     Feb 1<span class="ordinal">st</span> at 12:13 AM
                                 </td>
                             </tr>
@@ -325,7 +327,7 @@
                             <tr>
                                 <td><b>Arrival</b></td>
                                 <td>
-                                    Chhatrapati Shivaji Maharaj Terminus (CSMT)<br />
+                                    Surat Railway Station<br />
                                     Feb 4<span class="ordinal">th</span> at 1:50 AM
                                 </td>
                             </tr>
@@ -439,6 +441,8 @@
                     </table>
                 </div>
                 <div id="MumbaiTrains" class="tabcontent type">
+                    <div><b>Train bookings open 120 days prior to departure date</b></div>
+                    <br />
                     <h4>Trains from Mumbai to Goa</h4>
                     <table class="table table-striped">
                         <tbody>
@@ -501,10 +505,6 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Name</label>
                         <input class="form-control" type="text" placeholder="Name" name="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Message</label>
