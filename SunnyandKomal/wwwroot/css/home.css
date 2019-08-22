@@ -76,6 +76,9 @@
 }
 .travel-tab-container {
     margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .ordinal {
     vertical-align: super;
@@ -93,6 +96,12 @@ footer{
     justify-content: center;
     align-items: center;
 }
+.message-button {
+    color: #fff;
+    background-color: #d18eb6;
+    border-color: #d18eb6;
+}
+
 
 /*MOBILE START*/
 @media only screen and (max-width: 992px) {
@@ -500,6 +509,7 @@ footer{
 .tab {
     overflow: hidden;
     background-color: #f1f1f1;
+    width: 85%;
 }
 #Surat {
     text-align: -webkit-center;

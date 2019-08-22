@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SunnyandKomal.Models;
 
 namespace SunnyandKomal.Data
 {
@@ -12,5 +13,6 @@ namespace SunnyandKomal.Data
             : base(options)
         {
         }
+        public DbSet<SunnyandKomal.Models.GuestBook> GuestBook { get; set; }
     }
 }
