@@ -1,9 +1,5 @@
 ﻿@model GuestBook
 
-@{
-    ViewData["Title"] = "";
-}
-
 @section Styles{
     <link href="~/css/home.css" rel="stylesheet" />
     <script type="text/javascript" src="~/js/site.js"></script>
@@ -36,7 +32,8 @@
 <div class="w3-main" style="margin-left:55%">
     <div id="us" class="sunnykomal-container">
         <div>
-            <h1 class="goa-text cursive">Goa, India</h1><h3 class="date-text cursive">02.02.2020</h3>
+            <h1 class="goa-text cursive">Goa, India</h1>
+            <h3 class="date-text cursive">02.02.2020</h3>
             <div id="countdown"></div>
         </div>
     </div>
@@ -526,7 +523,18 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form asp-action="Create">
+                            <form action="https://getform.io/f/d87b5405-3a8c-4d3f-8d28-ea42a61043e4" method="POST">
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    <input class="form-control" type="text" placeholder="Name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Message">Message</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="message" placeholder="Leave a message for Sunny & Komal"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
+                            </form>
+                            @*<form asp-action="Create">
                                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                                 <div class="form-group">
                                     <label asp-for="Name" class="control-label"></label>
@@ -541,12 +549,25 @@
                                 <div class="modal-footer">
                                     <input type="submit" value="Submit" class="btn btn-outline-primary" />
                                 </div>
-                            </form>
+                            </form>*@
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        @*<div class="container card-container">
+            <section class="card">
+                @foreach (var item in ViewBag.Messages)
+                {
+                    <div class="card-content">
+                        <div class="div-message">"@item.Message"</div>
+                        <div class="div-name">- @item.Name</div>
+                    </div>
+                }
+            </section>
+        </div>*@
+
     </div>
 
     <footer>

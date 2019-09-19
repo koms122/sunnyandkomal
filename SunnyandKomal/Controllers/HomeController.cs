@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SunnyandKomal.Data;
 using SunnyandKomal.Models;
 
@@ -19,6 +20,7 @@ namespace SunnyandKomal.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Messages = _context.GuestBook;
             return View();
         }
 
@@ -26,20 +28,21 @@ namespace SunnyandKomal.Controllers
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,Name,Message")] GuestBook guestBook)
         {
             if (ModelState.IsValid)
             {
+                guestBook.DateCreated = DateTime.Now;
+
                 _context.Add(guestBook);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(guestBook);
+            return View();
         }
-
-
 
         //public IActionResult About()
         //{

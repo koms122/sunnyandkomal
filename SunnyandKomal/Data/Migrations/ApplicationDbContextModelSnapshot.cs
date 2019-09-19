@@ -190,11 +190,18 @@ namespace SunnyandKomal.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("DateCreated");
+
+                    b.Property<int?>("GuestBookID");
+
                     b.Property<string>("Message");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ID");
+
+                    b.HasIndex("GuestBookID");
 
                     b.ToTable("GuestBook");
                 });
@@ -242,6 +249,13 @@ namespace SunnyandKomal.Data.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("SunnyandKomal.Models.GuestBook", b =>
+                {
+                    b.HasOne("SunnyandKomal.Models.GuestBook")
+                        .WithMany("MyGuestBook")
+                        .HasForeignKey("GuestBookID");
                 });
 #pragma warning restore 612, 618
         }

@@ -37,7 +37,7 @@
     font-family: monospace !important;
     letter-spacing: 3px;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 .header-text {
     text-align: center;
@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: center;
     opacity: .85;
-    background-size: 45%;
+    background-size: 180%;
 }
 .timeline-container {
     display: flex;
@@ -101,7 +101,40 @@ footer{
     background-color: #d18eb6;
     border-color: #d18eb6;
 }
+.card {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    min-height: 215px;
+    overflow-x: auto;
+    border: none !important;
+}
+    .card::-webkit-scrollbar {
+        display: none;
+    }
 
+.card-content {
+    border: #D18EB5 1px solid;
+    min-width: 215px;
+    margin: 5px;
+    padding: 10px;
+    color: #34495e;
+    border-radius: 10px;
+}
+
+.card-container{
+    margin-top: 2em;
+}
+.div-message{
+    font-size: 1.1em;
+}
+.div-name {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    font-size: 1.4em;
+    font-family: 'Arima Madurai', cursive !important;
+}
 
 /*MOBILE START*/
 @media only screen and (max-width: 992px) {
@@ -110,12 +143,16 @@ footer{
     }
     .background-img {
         background-position: 50%;
+        height: 100vh;
     }
     .name {
         font-size: 3.7em !important;
     }
     .name-text {
         left: 25px;
+    }
+    .sunnykomal-container {
+        background-size: 180%;
     }
     .goa-text {
         margin: 30px 0px 30px 0px;
@@ -196,61 +233,47 @@ footer{
     .background-img {
         background-position: 50%;
     }
-
     .name {
         font-size: 3.7em !important;
     }
-
     .name-text {
         left: 25px;
     }
-
     .goa-text {
         margin: 30px 0px 30px 0px;
         font-size: 2.7em !important;
     }
-
     .date-text {
         margin: 30px 0px 30px 0px;
         font-size: 2.2em !important;
     }
-
     #countdown {
         padding-top: 45px;
     }
-
     .header-text {
         font-size: 2.7em !important;
     }
-
     .gallery-container {
         z-index: -1;
     }
-
     .gallery-text {
         font-size: 2.7em !important;
     }
-
     .content {
         padding-top: 20px !important;
     }
-
     .time div {
         font-size: 1em;
     }
-
     .dresscode {
         font-size: .75em !important;
     }
-
     .timeline {
         padding: 40px 0;
     }
-
     .timeline-date {
         margin-left: 15px;
     }
-
     .timeline ul li {
         padding: 35px 40px;
     }
@@ -268,7 +291,6 @@ footer{
         text-align: end;
         width: 235px;
     }
-
     .timeline ul li:nth-child(odd) .time {
         text-align: start;
         width: 235px;
