@@ -124,6 +124,7 @@ footer{
 .card-content {
     border: #D18EB5 1px solid;
     min-width: 215px;
+    min-height: 215px;
     margin: 5px;
     padding: 10px;
     color: #34495e;
@@ -133,7 +134,7 @@ footer{
 .card-container{
     margin-top: 2em;
 }
-.div-message{
+.div-message {
     font-size: 1.0em;
 }
 .div-name {
@@ -215,7 +216,11 @@ footer{
     .card-animate {
         /*transition: opacity 0.5s ease-out;*/
         animation: moveSlideshow 20s linear infinite;
-        animation-delay: 10s;
+        animation-delay: 80s;
+    }
+    .div-message {
+        max-height: 130px;
+        overflow-y: auto;
     }
 }
 /*MOBILE END*/
@@ -395,6 +400,10 @@ footer{
     }
     .accommodation-container .accommodation-details {
         padding: 10px 55px 0px 55px !important;
+    }
+    .div-message {
+        height: 215px;
+        overflow-y: auto;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) END */
