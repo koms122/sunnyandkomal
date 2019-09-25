@@ -7,6 +7,7 @@
 
 <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
     <button onclick="w3_close()" class="w3-bar-item w3-large">&times;</button>
+    <img src="~/images/logo.png" alt="black white logo" class="bwlogo" />
     <a href="#home" class="w3-bar-item w3-button">Home</a>
     <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
     <a href="#wedding" class="w3-bar-item w3-button">Wedding Details</a>
@@ -18,6 +19,7 @@
 <div class="menu-container d-flex w3-center">
     <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
 </div>
+
 
 <div id="home" class="mainpic-container">
     <nav class="mainpic-nav">
@@ -38,7 +40,6 @@
             <div id="countdown"></div>
         </div>
     </div>
-
 
     <div id="gallery" class="gallery-container">
         <div class="gallery-text cursive">Gallery</div>
@@ -536,21 +537,21 @@
                                 <button type="submit" class="btn btn-sm btn-outline-primary">Submit</button>
                             </form>
                             @*<form asp-action="Create">
-                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                <div class="form-group">
-                                    <label asp-for="Name" class="control-label"></label>
-                                    <input asp-for="Name" class="form-control" />
-                                    <span asp-validation-for="Name" class="text-danger"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Message" class="control-label"></label>
-                                    <textarea rows="5" asp-for="Message" class="form-control"></textarea>
-                                    <span asp-validation-for="Message" class="text-danger"></span>
-                                </div>
-                                <div class="modal-footer">
-                                    <input type="submit" value="Submit" class="btn btn-outline-primary" />
-                                </div>
-                            </form>*@
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Name" class="control-label"></label>
+                                        <input asp-for="Name" class="form-control" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Message" class="control-label"></label>
+                                        <textarea rows="5" asp-for="Message" class="form-control"></textarea>
+                                        <span asp-validation-for="Message" class="text-danger"></span>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="submit" value="Submit" class="btn btn-outline-primary" />
+                                    </div>
+                                </form>*@
                         </div>
                     </div>
                 </div>
@@ -585,17 +586,24 @@
         </div>
 
         @*<div class="container card-container">
-            <section class="card">
-                @foreach (var item in ViewBag.Messages)
-                {
-                    <div class="card-content">
-                        <div class="div-message">"@item.Message"</div>
-                        <div class="div-name">- @item.Name</div>
-                    </div>
-                }
-            </section>
-        </div>*@
+                <section class="card">
+                    @foreach (var item in ViewBag.Messages)
+                    {
+                        <div class="card-content">
+                            <div class="div-message">"@item.Message"</div>
+                            <div class="div-name">- @item.Name</div>
+                        </div>
+                    }
+                </section>
+            </div>*@
 
+    </div>
+
+    <div class="logo-container">
+        <div></div>
+        <div>
+            <img class="logo" src="~/images/SK.png" alt="logo" />
+        </div>
     </div>
 
     <footer>
